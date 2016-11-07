@@ -6,6 +6,7 @@ body{font-family: 'Source Sans Pro', sans-serif;font-size:14px;line-height:18px;
 .contemplete {
   margin: 0 auto;
   width: 928px;
+
 }
 .clear{overflow:hidden;}
 input[type="text"], input[type="email"] {
@@ -176,7 +177,9 @@ margin:200px 0;
 
 
 
-.slidersection {}
+.slidersection {
+  height: 60px;
+}
 .contentsection {
   background: #ffffff none repeat scroll 0 0;
   border: 1px solid #ca932f;

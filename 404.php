@@ -1,5 +1,5 @@
 <?php
-include "inc/heade";
+include "inc/header.php";
 ?>
 
 	<div class="contentsection contemplete clear">
