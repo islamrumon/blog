@@ -1,147 +1,43 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Add New Post | Admin</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/text.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/grid.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/layout.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/nav.css" media="screen" />
-    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css" media="screen" /><![endif]-->
-    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen" /><![endif]-->
-    <link href="css/fancy-button/fancy-button.css" rel="stylesheet" type="text/css" />
-    <!--Jquery UI CSS-->
-    <link href="css/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
-    <!-- BEGIN: load jquery -->
-    <script src="js/jquery-1.6.4.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/jquery-ui/jquery.ui.core.min.js"></script>
-    <script src="js/jquery-ui/jquery.ui.widget.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.ui.accordion.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.effects.core.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.effects.slide.min.js" type="text/javascript"></script>
-    <!-- END: load jquery -->
-    <!--jQuery Date Picker-->
-    <script src="js/jquery-ui/jquery.ui.widget.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.ui.datepicker.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.ui.progressbar.min.js" type="text/javascript"></script>
-    <!-- jQuery dialog related-->
-    <script src="js/jquery-ui/external/jquery.bgiframe-2.1.2.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.ui.mouse.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.ui.draggable.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.ui.position.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.ui.resizable.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.ui.dialog.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.effects.core.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.effects.blind.min.js" type="text/javascript"></script>
-    <script src="js/jquery-ui/jquery.effects.explode.min.js" type="text/javascript"></script>
-    <!-- jQuery dialog end here-->
-    <script src="js/jquery-ui/jquery.ui.accordion.min.js" type="text/javascript"></script>
-    <!--Fancy Button-->
-    <script src="js/fancy-button/fancy-button.js" type="text/javascript"></script>
-    <script src="js/setup.js" type="text/javascript"></script>
-    <!-- Load TinyMCE -->
-    <script src="js/tiny-mce/jquery.tinymce.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            setupTinyMCE();
-            setDatePicker('date-picker');
-            $('input[type="checkbox"]').fancybutton();
-            $('input[type="radio"]').fancybutton();
-        });
-    </script>
-		<script type="text/javascript">
-        $(document).ready(function () {
-            setupLeftMenu();
-		    setSidebarHeight();
-        });
-    </script>
-    <!-- /TinyMCE -->
-    <style type="text/css">
-		#tinymce{font-size:15px !important;}
-    </style>
-</head>
-<body>
-    <div class="container_12">
-        <div class="grid_12 header-repeat">
-            <div id="branding">
-                <div class="floatleft logo">
-                    <img src="img/livelogo.png" alt="Logo" />
-				</div>
-				<div class="floatleft middle">
-					<h1>Training with live project</h1>
-					<p>www.trainingwithliveproject.com</p>
-				</div>
-                <div class="floatright">
-                    <div class="floatleft">
-                        <img src="img/img-profile.jpg" alt="Profile Pic" />
-					</div>
-                    <div class="floatleft marginleft10">
-                        <ul class="inline-ul floatleft">
-                            <li>Hello Admin</li>
-                            <li><a href="#">Config</a></li>
-                            <li><a href="#">Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="clear">
-                </div>
-            </div>
-        </div>
-        <div class="clear">
-        </div>
-        <div class="grid_12">
-            <ul class="nav main">
-                <li class="ic-dashboard"><a href="index.html"><span>Dashboard</span></a> </li>
-                <li class="ic-form-style"><a href=""><span>User Profile</span></a></li>
-				<li class="ic-typography"><a href="changepassword.html"><span>Change Password</span></a></li>
-				<li class="ic-grid-tables"><a href="inbox.html"><span>Inbox</span></a></li>
-                <li class="ic-charts"><a href="postlist.html"><span>Visit Website</span></a></li>
-            </ul>
-        </div>
-        <div class="clear">
-        </div>
-        <div class="grid_2">
-            <div class="box sidemenu">
-                <div class="block" id="section-menu">
-                    <ul class="section menu">
-						<li><a class="menuitem">Site Option</a>
-                            <ul class="submenu">
-                                <li><a href="titleslogan.html">Title & Slogan</a></li>
-                                <li><a href="social.html">Social Media</a></li>
-                                <li><a href="copyright.html">Copyright</a></li>
-                                
-                            </ul>
-                        </li>
-						
-                         <li><a class="menuitem">Update Pages</a>
-                            <ul class="submenu">
-                                <li><a>About Us</a></li>
-                                <li><a>Contact Us</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="menuitem">Category Option</a>
-                            <ul class="submenu">
-                                 <li><a href="addcat.html">Add Category</a> </li>
-                                <li><a href="catlist.html">Category List</a> </li>
-                            </ul>
-                        </li>
-                        <li><a class="menuitem">Post Option</a>
-                            <ul class="submenu">
-                                <li><a href="addpost.html">Add Post</a> </li>
-                                <li><a href="postlist.html">Post List</a> </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+﻿<?php
+include "inc/header.php";
+include "inc/sidebar.php";
+?>
         <div class="grid_10">
 		
             <div class="box round first grid">
                 <h2>Add New Post</h2>
-                <div class="block">               
-                 <form action="" method="" enctype="multipart/form-data">
+                <div class="block">
+                    <?php
+                    $for=new formet();
+                    $db= new Database();
+                    if($_SERVER["REQUEST_METHOD"] == "POST"){
+                        $title=$_POST['title'];
+                        $cat=$_POST['cat'];
+                        $body=$_POST['body'];
+                        $author=$_POST['author'];
+                        $tags=$_POST['tags'];
+
+                        $img_name=$_FILES['pic']['name'];
+                        $img_size=$_FILES['pic']['size'];
+                        $img_tmpname=$_FILES['pic']['tmp_name'];
+                        $img_get=$for->image($img_name,$img_tmpname);
+                        //move_uploaded_file($img_tmpname,$img_get);
+                        if($title == "" || $cat == "" || $body == "" || $author == "" || $tags == "" || $img_name == ""){
+                            echo "Filed Must not be Empty";
+                        }else{
+                            move_uploaded_file($img_tmpname,$img_get);
+                            $query="INSERT INTO post (cat,title,body,img,author,tags) VALUES ('$cat','$title','$body','$img_get','$author','$tags')";
+                            $post=$db->insert($query);
+                            if($post){
+                                echo "Data Insert Successfully";
+                            }else{
+                                echo "fuck you";
+                            }
+                        }
+
+                    }
+                    ?>
+                 <form action="" method="post" enctype="multipart/form-data">
                     <table class="form">
                        
                         <tr>
@@ -149,7 +45,7 @@
                                 <label>Title</label>
                             </td>
                             <td>
-                                <input type="text" placeholder="Enter Post Title..." class="medium" />
+                                <input type="text" placeholder="Enter Post Title..." class="medium" name="title" />
                             </td>
                         </tr>
                      
@@ -158,21 +54,39 @@
                                 <label>Category</label>
                             </td>
                             <td>
-                                <select id="select" name="select">
-                                    <option value="1">Category One</option>
-                                    <option value="2">Category Two</option>
-                                    <option value="3">Cateogry Three</option>
+                                <select id="select" name="cat">
+                                    <option>Select Catagory</option>
+                                    <?php
+                                    $query="SELECT * FROM cat";
+                                    $cat=$db->select($query);
+                                    if($cat){
+                                        while($result = $cat->fetch_assoc()){
+                                            ?>
+                                            <option value="<?php echo $result['id'];?>"><?php echo $result['cat'];?></option>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
                                 </select>
+
                             </td>
                         </tr>
                    
                     
                         <tr>
                             <td>
-                                <label>Date Picker</label>
+                                <label>Author</label>
                             </td>
                             <td>
-                                <input type="text" id="date-picker" />
+                                <input type="text" name="author" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Tags</label>
+                            </td>
+                            <td>
+                                <input type="text" name="tags" />
                             </td>
                         </tr>
                         <tr>
@@ -180,7 +94,7 @@
                                 <label>Upload Image</label>
                             </td>
                             <td>
-                                <input type="file" />
+                                <input type="file" name="pic" />
                             </td>
                         </tr>
                         <tr>
@@ -188,7 +102,7 @@
                                 <label>Content</label>
                             </td>
                             <td>
-                                <textarea class="tinymce"></textarea>
+                                <textarea class="tinymce" name="body"></textarea>
                             </td>
                         </tr>
 						<tr>
@@ -207,10 +121,6 @@
     </div>
     <div class="clear">
     </div>
-    <div id="site_info">
-        <p>
-         &copy; Copyright <a href="http://trainingwithliveproject.com">Training with live project</a>. All Rights Reserved.
-        </p>
-    </div>
-</body>
-</html>
+<?php
+include "inc/footer.php";
+?>

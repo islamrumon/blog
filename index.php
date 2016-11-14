@@ -7,9 +7,6 @@ include "helpers/formet.php"
 ?>
 
 
-
-
-
 	<div class="contentsection contemplete clear">
 		<div class="maincontent clear">
 			<?php
@@ -18,7 +15,7 @@ include "helpers/formet.php"
 
 
 			/*pagenatino*/
-			$per_page=4;/*proti page ay kotogula post show korbay*/
+			$per_page=3;/*proti page ay kotogula post show korbay*/
 			if(isset($_GET['page'])){
 				$page=$_GET['page'];
 			}else{
@@ -59,7 +56,7 @@ include "helpers/formet.php"
 					$total_post=ceil($total_page/$per_page);
 
 					echo"<span>";
-					for($i=1; $i <= $total_post; ++$i){
+					for($i=1; $i <= $total_post; $i++){
 						echo "<a href='index.php?page=".$i."'> | $i Page</a>";
 					}
 					echo "</span>";

@@ -1,4 +1,13 @@
-
+<?php
+//set headers to NOT cache a page
+header("Cache-Control: no-cache, must-revalidate"); //HTTP 1.1
+header("Pragma: no-cache"); //HTTP 1.0
+header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+// Date in the past
+//or, if you DO want a file to cache, use:
+header("Cache-Control: max-age=2592000");
+//30days (60sec * 60min * 24hours * 30days)
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,8 +62,8 @@
             <a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
         </div>
         <div class="searchbtn clear">
-            <form action="" method="post">
-                <input type="text" name="keyword" placeholder="Search keyword..."/>
+            <form action="search.php" method="get">
+                <input type="text" name="search" placeholder="Search keyword..."/>
                 <input type="submit" name="submit" value="Search"/>
             </form>
         </div>

@@ -33,9 +33,32 @@ class formet
     }
 
     public function pic($img){
-        $img="./admin/uplode/$img";
+        $img="admin/$img";
         return $img;
         /*
          * this is img showin method*/
     }
+
+    public function validation($data){
+        $data=trim($data);
+        $data=stripcslashes($data);
+        $data=htmlspecialchars($data);
+        return $data;
+    }
+
+    /**
+     * @param $image
+     * @return string
+     */
+    public function image($img_name,$img_tmpname){
+
+        $permite=array('jpg','png','jpeg','gif');
+
+        $div=explode('.',$img_name);
+        $img_ext=strtolower(end($div));
+        $uniq_name=substr(md5(time()),0,10).'.'.$img_ext;
+        $img_upload="uplode/".$uniq_name;
+        return $img_upload;
+    }
+
 }
